@@ -89,6 +89,105 @@ const generateResumeHTML = async (): Promise<string> => {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Resume</title>
+            <style>
+            
+section {
+    padding: 20px;
+}
+
+h1.main-heading {
+    color:#054875eb;
+    border-bottom: 2px solid #054875eb;
+    padding-bottom: 10px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button.submit-btn {
+    background-color:#054875eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+button.submit-btn:hover {
+    background-color:#3b80adeb;
+    border: 1px solid #054875eb;
+    box-shadow: #054875eb;
+}
+
+.hidden {
+    display: none;
+}
+
+.resume-container {
+    width: 90%;
+    max-width: 800px;
+    /* text-align: center; */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #054875eb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #deecf1;
+    border-radius: 5px;
+    font-size: 80%;
+}
+.resume-header{
+    display: flex;
+
+    width: 100%;
+    /* flex-direction: column; */
+    justify-content: center; 
+     align-items: center;
+}
+.personalinfo{
+    left: 0px;
+    
+}
+.resume-header img {
+    right: 0px;
+    width: 18em;
+    height: 19vh;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    font-size: 80%;
+}
+.resume-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #57959f;
+}
+.resume-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+            </style>
         </head>
         <body>
             <div class="resume-container">
