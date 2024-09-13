@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resume Builder</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script> -->
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">Resume Builder</button>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="#m1">Milestone01&02</a></li>
+                <li><a href="#m3">Milestone03</a></li>
+                <li><a href="#m4">Milestone04</a></li>
+                <li><a href="#m5">Milestone05</a></li>
+            </ul>
+        </nav>
+ <!-- Milestone 01 & 02 Static Resume -->
+        <section id="m1">
+            <div class="resume-container">
+                <div class="resume-header">
+                    <div class="image">
+                        <img src="taha.jpg" alt="Photo" />
+                    </div>
+                    <div class="personalinfo">
+                        <h1>Muhammad Taha Baig</h1>
+                        <p>Email: example.@gmail.com</p>
+                        <p>Phone: 123-456-7890</p>
+                        <p>Address: Surjani Town</p>
+                    </div>
+                </div>
+                <div class="resume-section">
+                    <h1>Education</h1>
+                    <p><strong>Institution: Commerce</strong></p>
+                    <p><strong>Degree: Intermadite</strong> </p>
+                    <p><strong>Graduation Date:</strong> --</p>
+                </div>
+                <div class="resume-section">
+                    <h1>Skills</h1>
+                    <button id="toggle-skills" class="toggle-btn">Show Skills</button>
+                    <div id="skills-content" class="hidden">
+                        <p>JavaScript, TypeScript, HTML, CSS, TailwindCSS, Next.js, MongoDB, PostgreSQL, Node.js</p>
+                    </div>
+                </div>
+                <div class="resume-section">
+                    <h1>Work Experience</h1>
+                    <p><strong>example</strong> - CEO</p>
+                    <p><strong>Start Date:</strong> January 2023</p>
+                    <p><strong>End Date:</strong>Present</p>
+                    <p><strong>Responsibilities:</strong> frontend: Programming Language
+                        <dir></dir>
+                        "Developed a Snake Game using HTML, CSS, and JavaScript.
+                        Implemented features like collision detection and scoring.
+                        Demonstrated strong problem-solving skills and debugging
+                        techniques. Successfully hosted on GitHub Pages for public
+                        access."
+                    </p>
+                </div>
+                <div class="resume-section">
+                    <h1>About</h1>
+                    <p>Proficiency in ASP .NET and other programming languages
+                        o Experience in designing and developing web applications
+                        o Skills in graphic design, MS Office, and computer repairing
+                        o Strong problem-solving skills and work ethic
+                        o Eagerness to learn and take on new challenges </p>
+                </div>
+            </div>
+            </div>
+        </section>
+       
+
+        <!-- Milestone 03 -->
+        <section id="m3">
+            <h1 class="main-heading">Milestone 03</h1>
+            <h1 class="main-heading">Dynamic Resume</h1>
+            <form id="resumeform">
+                <!-- Personal Information -->
+                <section class="Personal">
+                    <h2>Personal Information</h2>
+                    <form id="personal-info-form" class="form-section">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+
+                        <label for="address">Address:</label>
+                        <textarea id="address" name="address" placeholder="Country" rows="3" required></textarea>
+
+                        <label for="photo">Upload Photo:</label>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </form>
+                </section>
+
+                <!-- Education -->
+                <section>
+                    <h2>Education</h2>
+                    <form id="education-form" class="form-section">
+                        <label for="institution">Institution:</label>
+                        <input type="text" id="institution" name="institution" placeholder="University Name" required>
+
+                        <label for="degree">Degree:</label>
+                        <input type="text" id="degree" name="degree" placeholder="Bachelor's in Computer Science"
+                            required>
+
+                        <label for="graduation-date">Graduation Date:</label>
+                        <input type="date" id="graduation-date" name="graduation-date" required>
+                    </form>
+                </section>
+
+                <!-- Skills -->
+                <section>
+                    <h2>Skills</h2>
+                    <form id="skills-form" class="form-section">
+                        <label for="skills">Skills:</label>
+                        <textarea id="skills" name="skills" placeholder="JavaScript, TypeScript, HTML, CSS" rows="5"
+                            required></textarea>
+                    </form>
+                </section>
+
+                <!-- Work Experience -->
+                <section>
+                    <h2>Work Experience</h2>
+                    <form id="work-experience-form" class="form-section">
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" name="company" placeholder="Company Name" required>
+
+                        <label for="position">Position:</label>
+                        <input type="text" id="position" name="position" placeholder="Job Title" required>
+
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" name="start-date" required>
+
+                        <label for="end-date">End Date:</label>
+                        <input type="date" id="end-date" name="end-date">
+
+                        <label for="responsibilities">Responsibilities:</label>
+                        <textarea id="responsibilities" name="responsibilities"
+                            placeholder="Describe your responsibilities" rows="5" required></textarea>
+                    </form>
+                </section>
+
+                <!-- About -->
+                <section>
+                    <h2>About</h2>
+                    <form id="about-form" class="form-section">
+                        <label for="about-me">About Me:</label>
+                        <textarea id="about-me" name="about-me" placeholder="Write something about yourself..." rows="5"
+                            required></textarea>
+                    </form>
+                </section>
+
+                <!-- Resume Output -->
+                <section id="resume-output" class="resume-output hidden">
+                    <h2>Generated Resume</h2>
+                    <div id="resume-content"></div>
+                    <button id="download-resume" class="submit-btn hidden">Download Resume</button>
+                </section>
+
+                <button type="button" id="generate-resume" class="submit-btn">Generate Resume</button>
+                <button id="edit-resume" type="button" class="hidden">Edit Resume</button>
+                <button id="share-resume" class="hidden">Share Resume</button>
+        </section>
+        </form>
+        <!-- Milestone 04 -->
+        <section id="m4">Milestone 04</section>
+
+        <!-- Milestone 05 -->
+        <section id="m5">Milestone 05</section>
+
+        <script src="main.js"></script>
+    </body>
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <nav>
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <ul id="nav-links" class="nav-links">
+            <li><a href="#m1">Milestone01&02</a></li>
+            <li><a href="#m3">Milestone03</a></li>
+            <li><a href="#m4">Milestone04</a></li>
+            <li><a href="#m5">Milestone05</a></li>
+        </ul>
+    </nav>  -->
+
+    <!-- Milestone 01 & 02 Static Resume -->
+    <!-- <section id="m1">
+        <h1 class="main-heading">Milestone 01 & 02</h1>
+        <div class="static-resume">
+            <h1>Static Resume</h1>
+            <div class="resume-header">
+                <img src="KanwalHeer.jpg" alt="Profile Photo" style="width: 100px; height: 100px; border-radius: 50%;">
+                <h1>Kanwal Heer</h1>
+                <p><strong>Email: kanwalheer@example.com</strong></p>
+                <p>Phone: 123-456-7890</p>
+                <p>Address: Gulshan e Maymar Karachi</p>
+            </div>
+            <div class="resume-section">
+                <h1>Education</h1>
+                <p><strong>University Name : JMB College</strong></p>
+                <p>Degree: Bachelor's in Computer Science</p>
+                <p>Graduation Date: May 2022</p>
+            </div>
+            <div class="resume-section">
+                <h1>Skills</h1>
+                <button id="toggle-skills" class="toggle-btn">Show Skills</button>
+                <div id="skills-content" class="hidden">
+                    <p>JavaScript, TypeScript, HTML, CSS ,Tailwindcss , Nextjs, MongoDb , PostgreSql , Nodejs</p>
+                </div>
+            </div>
+            <div class="resume-section">
+                <h1>Work Experience</h1>
+                <p><strong>Company Name : Paandaa</strong></p>
+                <p>Job tittle :Full Stack developer</p>
+                <p>Start Date: January 2023</p>
+                <p>End Date: Present</p>
+                <p>
+                    Responsibilities:
+                </p>
+                <p>
+                    As a Full Stack Developer, I lead a team of developers, overseeing the development of complex projects from concept to deployment. My role involves close collaboration with clients to understand their requirements and deliver tailored solutions. I actively engage in client communication to ensure their needs are met and provide technical guidance to address any issues. Additionally, I work closely with my team, fostering an environment of continuous learning and professional growth. I also stay updated with the latest technologies and best practices to ensure our projects incorporate the most efficient and innovative solutions.
+                </p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Milestone 03 -->
+    <!-- <section id="m3">
+    <h1 class="main-heading">Milestone 03</h1>
+    <h1 class="main-heading">Dynamic Resume</h1> -->
+
+    <!-- Personal Information -->
+    <!-- <section>
+        <h2>Personal Information</h2>
+        <form class="form-section">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phon Number" required>
+            
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Country" rows="3" required></textarea>
+            
+            <label for="photo">Upload Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+        </form>
+    </section> -->
+
+    <!-- Education -->
+    <!-- <section>
+        <h2>Education</h2>
+        <form id="education-form" class="form-section">
+            <label for="institution">Institution:</label>
+            <input type="text" id="institution" name="institution" placeholder="University Name" required>
+            
+            <label for="degree">Degree:</label>
+            <input type="text" id="degree" name="degree" placeholder="Bachelor's in Computer Science" required>
+            
+            <label for="graduation-date">Graduation Date:</label>
+            <input type="date" id="graduation-date" name="graduation-date" required>
+        </form>
+    </section> -->
+
+    <!-- Skills -->
+    <!-- <section>
+        <h2>Skills</h2>
+        <form id="skills-form" class="form-section">
+            <label for="skills">Skills:</label>
+            <textarea id="skills" name="skills" placeholder="JavaScript, TypeScript, HTML, CSS" rows="5" required></textarea>
+        </form>
+    </section> -->
+
+    <!-- Work Experience -->
+    <!-- <section>
+        <h2>Work Experience</h2>
+        <form id="work-experience-form" class="form-section">
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" placeholder="Company Name" required>
+            
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" placeholder="Job Title" required>
+            
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" required>
+            
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date">
+            
+            <label for="responsibilities">Responsibilities:</label>
+            <textarea id="responsibilities" name="responsibilities" placeholder="Describe your responsibilities" rows="5" required></textarea>
+        </form>
+    </section> -->
+
+    <!-- About -->
+    <!-- <section>
+        <h2>About</h2>
+        <form id="about-form" class="form-section">
+            <label for="about-me">About Me:</label>
+            <textarea id="about-me" name="about-me" placeholder="Write something about yourself..." rows="5" required></textarea>
+        </form>
+    </section> -->
+
+    <!-- Resume Output -->
+    <!-- <section id="resume-output" class="resume-output" style="display: none;">
+        <h2>Generated Resume</h2>
+        <div id="resume-content"></div>
+        <button id="download-resume" class="submit-btn">Download Resume</button>
+    </section> -->
+
+    <!-- <button type="submit" id="submit-all" class="submit-btn">Generate Resume</button>
+    <button id="edit-resume" type="button">Edit Resume</button>
+    <button id="share-resume">Share Resume</button>
+
+
+</section> -->
+
+    <!-- Milestone 03 -->
+    <!-- <section id="m4">Milestone 04</section> -->
+
+    <!-- Add these buttons inside your form or where appropriate -->
+
+
+    <!-- Milestone 03 -->
+    <!-- <section id="m5">Milestone 05</section> -->
+
+
+    <!-- <script src="main.js"></script>
+
+ -->
+    <!-- </body>
+</html> -->
